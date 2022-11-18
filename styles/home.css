@@ -1,0 +1,321 @@
+*{
+    --midnight-blue: #03045eff;
+--dark-cornflower-blue: #023e8aff;
+--star-command-blue: #0077b6ff;
+--blue-green: #0096c7ff;
+--pacific-blue: #00b4d8ff;
+--sky-blue-crayola: #48cae4ff;
+--middle-blue: #90e0efff;
+--blizzard-blue: #ade8f4ff;
+--light-cyan: #caf0f8ff;
+}
+
+h1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-left: 5%;
+}
+
+
+h2 {
+    text-align: center;
+    font-size: 3em;
+    margin-bottom: 0;
+    margin-top: 0;
+    line-height: 1;
+    text-decoration: none;
+    color: black;
+    animation: leaderboardFlash 2.5s ease-in-out infinite alternate;
+}
+
+@keyframes leaderboardFlash {
+    from {
+      text-shadow: 0 0 10px black, 0 0 20px purple, 0 0 30px white, 0 0 40px green,
+        0 0 35px green, 0 0 35px purple, 0 0 35px blue, 0 0 135px green;
+    }
+    to {
+      text-shadow: 0 0 5px white, 0 0 10px white, 0 0 15px white, 0 0 20px yellow,
+        0 0 35px yellow, 0 0 40px red, 0 0 50px red, 0 0 75px yellow;
+    }
+  }
+
+.blue.glowing {
+    text-align: center;
+    font-size: 3em;
+    margin-bottom: 0;
+    margin-top: 0;
+    line-height: 1;
+    text-decoration: none;
+    color: blue;
+    animation: blueButtonFlash 2.5s ease-in-out infinite alternate;
+}
+
+@keyframes blueButtonFlash {
+    from {
+      box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px blue,
+        0 0 75px blue, 0 0 80px blue, 0 0 100px blue, 0 0 150px blue;
+    }
+    to {
+      box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px lightblue,
+        0 0 85px lightblue, 0 0 85px lightblue, 0 0 85px lightblue, 0 0 85px lightblue;
+    }
+  }
+
+.red.glowing {
+    text-align: center;
+    font-size: 3em;
+    margin-bottom: 0;
+    margin-top: 0;
+    line-height: 1;
+    text-decoration: none;
+    color: red;
+    animation: redButtonFlash 2.5s ease-in-out infinite alternate;
+}
+
+@keyframes redButtonFlash {
+    from {
+      box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px red,
+        0 0 75px red, 0 0 80px red, 0 0 100px red, 0 0 150px red;
+    }
+    to {
+      box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px lightcoral,
+        0 0 85px lightcoral, 0 0 85px lightcoral, 0 0 85px lightcoral, 0 0 85px lightcoral;
+    }
+  }
+
+.yellow.glowing {
+    text-align: center;
+    font-size: 3em;
+    margin-bottom: 0;
+    margin-top: 0;
+    line-height: 1;
+    text-decoration: none;
+    color: darkgoldenrod;
+    animation: yellowButtonFlash 2.5s ease-in-out infinite alternate;
+}
+
+@keyframes yellowButtonFlash {
+    from {
+      box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px yellow,
+        0 0 75px yellow, 0 0 80px yellow, 0 0 100px yellow, 0 0 150px yellow;
+    }
+    to {
+      box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px lightgoldenrodyellow,
+        0 0 85px lightgoldenrodyellow, 0 0 85px lightgoldenrodyellow, 0 0 85px lightgoldenrodyellow, 0 0 85px lightgoldenrodyellow;
+    }
+  }
+
+.green.glowing {
+    text-align: center;
+    font-size: 3em;
+    margin-bottom: 0;
+    margin-top: 0;
+    line-height: 1;
+    text-decoration: none;
+    color: green;
+    animation: greenButtonFlash 2.5s ease-in-out infinite alternate;
+}
+
+.glowing:hover {
+    text-align: center;
+    font-size: 3em;
+    margin-bottom: 0;
+    margin-top: 0;
+    line-height: 1;
+    text-decoration: none;
+    color: green;
+    animation: greenButtonFlash 2.5s ease-in-out infinite alternate;
+}
+
+@keyframes greenButtonFlash {
+    from {
+        box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px green,
+          0 0 75px green, 0 0 80px green, 0 0 100px green, 0 0 150px green;
+      }
+      to {
+        box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px lightgreen,
+          0 0 85px lightgreen, 0 0 85px lightgreen, 0 0 85px lightgreen, 0 0 85px lightgreen;
+      }
+    }
+
+#full-game button {
+    padding: 60px;
+    font-size: 2em;
+    text-decoration: none;
+    border: 1px black solid;
+    cursor: pointer;
+    margin: 30px;
+}
+
+#user-buttons {
+    grid-area: buttons;
+}
+
+#board-display h2 {
+    grid-area: h2;
+}
+
+#board-display {
+    grid-area: leader-board;
+    display: grid;
+    grid-template-rows: min-content min-content 1fr;
+    grid-template-areas:
+        "h2"
+        
+    ;
+
+    background-color: white;
+    padding: 60px;
+    box-shadow: 10px 7px 17px rgba(0, 0, 0, 0.5), 10px 5px 15px rgba(0, 0, 0, 0.5);
+    border: 1px solid;
+    border-radius: 50px;
+}
+
+#board-display img.avatar-image {
+    height: max(16px, min(100px, 10vw));
+    width: max(16px, min(100px, 10vw));
+    grid-area: "avatar";
+}
+
+#difficulty-container {
+    grid-area: difficulty; 
+
+    background-color: white;
+    padding: 30px;
+
+    box-shadow: 10px 7px 17px rgba(0, 0, 0, 0.369), 10px 7px 17px rgba(0, 0, 0, 0.369);
+    border: 1px solid gray;
+    border-radius: 50px;
+}
+
+main#home {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: min-content 1fr;
+    grid-template-areas: 
+        "buttons  buttons"
+        "leader-board  difficulty"
+    ;
+    justify-content: start;
+    justify-items: center;
+    align-items: start;
+    row-gap: 25px;
+
+    margin: 35px;
+}
+
+#difficulty {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+
+    padding: 30px
+ 
+}
+
+#difficulty button {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#full-game {
+    display: grid;
+    grid-template-areas: 
+    'blueQ redW'
+    'yellowA greenS';
+}
+
+.blue {
+    grid-area: blueQ;
+    background-color: lightblue;
+}
+
+.red {
+    grid-area: redW;
+    background-color: lightcoral;
+}
+
+.yellow {
+    grid-area: yellowA;
+    background-color: yellow;
+}
+
+.green {
+    grid-area: greenS;
+    background-color: lightgreen;
+}
+
+a {
+    color: black;
+}
+
+.level {
+    padding: 40px;
+    font-size: 1em;
+}
+
+.dark-mode {
+    padding: 20px;
+}
+
+button.easy {
+    animation: easyFlashSpeed 2.5s linear infinite;
+}
+
+@keyframes easyFlashSpeed {
+    0% {
+      color: green;
+      text-shadow: none;
+    }
+    100% {
+      color: darkgoldenrod;
+      text-shadow: 
+        0 0 2rem orange, 
+        0 0 4rem yellow;
+    }
+}
+
+button.medium {
+    background-image: url(
+        https://media.geeksforgeeks.org/wp-content/uploads/20200828184719/rain-300x300.png);
+    animation: rain 3s linear infinite;
+    opacity: 1;
+    background-color: gainsboro;    
+}
+
+@keyframes rain {
+    0% {
+        background-position: 0 0;
+        opacity: 1;
+    }
+
+    100% {
+            background-position: 25% 75%;
+            opacity: 1;
+        }
+    }
+
+button.hard {
+    background-image: url(https://c.tenor.com/VbezPY1TRaMAAAAd/fire-flames.gif);
+    background-size: 100%;
+    color: whitesmoke;
+}
+
+button.insane {
+    background-image: url(https://tenor.com/view/mad-angry-rage-computer-gif-gif-15818044.gif);
+    background-size: cover;
+}
+
+#user-buttons button {
+    color: black;
+    background-color: white;
+}
+
+#user-buttons.dark-section button {
+    color: white;
+    background-color: black;
+}
+
+
