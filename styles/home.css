@@ -146,6 +146,8 @@ h2 {
     border: 1px black solid;
     cursor: pointer;
     margin: 30px;
+    width: 25vw;
+    height: 25vh;
 }
 
 #user-buttons {
@@ -190,19 +192,15 @@ h2 {
 }
 
 main#home {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: min-content 1fr;
-    grid-template-areas: 
-        "buttons  buttons"
-        "leader-board  difficulty"
-    ;
-    justify-content: start;
+    padding: 0;
+    margin-top: -4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     justify-items: center;
-    align-items: start;
-    row-gap: 25px;
-
-    margin: 35px;
+    align-items: center;
+    height: 100%;
+    overflow: hidden;
 }
 
 #difficulty {
@@ -225,6 +223,10 @@ main#home {
     grid-template-areas: 
     'blueQ redW'
     'yellowA greenS';
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
 }
 
 .blue {
@@ -317,5 +319,4 @@ button.insane {
     color: white;
     background-color: black;
 }
-
 
